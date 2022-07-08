@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="9" time="202.241363">
+    <testcase classname="Home_page" name="functionality of home page" time="30.183938">
+        <system-out><![CDATA[Given user is on home page..................................................passed
+When mouse hover on buy.....................................................passed
+When mouse hover on rent....................................................passed
+When mouse hover on sell....................................................passed
+When mouse hover on home loan...............................................passed
+When mouse hover on property services.......................................passed
+When mouse hover on MB Advise...............................................passed
+When mouse hover on help....................................................passed
+Then all links are working..................................................passed
+And close0..................................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Home_page" name="log In functionality when user enter valid credentials" time="29.863011">
+        <system-out><![CDATA[Given user is on LogIn page.................................................passed
+When enter registered email_id..............................................passed
+And click on next...........................................................passed
+When enter registered password..............................................passed
+And click on logIn..........................................................passed
+Then User should LogIn successfully.........................................passed
+Then click on logOut........................................................passed
+And close...................................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Home_page" name="log In functionality when user enter unregistered email_id" time="11.454281">
+        <system-out><![CDATA[Given user is on LogIn page1................................................passed
+When enter unregistered email_id1...........................................passed
+And click on next1..........................................................passed
+Then alert No User found with this Email id.1...............................passed
+And close1..................................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Home_page" name="log In functionality when user enter wrong password" time="12.720217">
+        <system-out><![CDATA[Given user is on LogIn page2................................................passed
+When enter registered email_id2.............................................passed
+And click on next2..........................................................passed
+And enter wrong password2...................................................passed
+And click on LogIn2.........................................................passed
+Then alert Wrong password. Try again or click Forgot password to reset it...passed
+And close2..................................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Home_page" name="log In functionality when user not entered the email_id" time="7.107556">
+        <failure message="java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because the return value of &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)&quot; is null&#13;&#10;&#9;at com.vnv.magicBricks.steps.definitions.HomePlusLogInSteps.no_email_id_entered3(HomePlusLogInSteps.java:315)&#13;&#10;&#9;at ✽.no email_id entered3(Feature/Home_Page.feature:55)&#13;&#10;"><![CDATA[Given user is on LogIn page3................................................passed
+When no email_id entered3...................................................failed
+And click on next3..........................................................skipped
+Then alert Please enter either Email id or Mobile number3...................skipped
+And close3..................................................................skipped
+
+StackTrace:
+java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)" because the return value of "org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)" is null
+	at com.vnv.magicBricks.steps.definitions.HomePlusLogInSteps.no_email_id_entered3(HomePlusLogInSteps.java:315)
+	at ✽.no email_id entered3(Feature/Home_Page.feature:55)
+]]></failure>
+    </testcase>
+    <testcase classname="Home_page" name="log In functionality when user not entered the password" time="9.183571">
+        <skipped><![CDATA[Given user is on LogIn page4................................................passed
+When entered the registered email_id4.......................................passed
+And click on next4..........................................................passed
+When do not enter the password4.............................................passed
+Then click on logIn4........................................................passed
+Then alert Please enter your password4......................................undefined
+And close4..................................................................skipped
+]]></skipped>
+    </testcase>
+    <testcase classname="Home_page" name="log In functionality through registered mobile no." time="78.105644">
+        <system-out><![CDATA[Given user is on log in page5...............................................passed
+When enter the registered mobile no.........................................passed
+And click on next5..........................................................passed
+When enters valid otp.......................................................passed
+And click on logIn5.........................................................passed
+Then user should logIn succesfully..........................................passed
+Then user should logOut.....................................................passed
+And close5..................................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Home_page" name="log In functionality when user enters unregistered mobile no" time="10.804578">
+        <system-out><![CDATA[Given user is on LogIn page6................................................passed
+When enter unregistered mobile no6..........................................passed
+And click on next6..........................................................passed
+Then alert No User found with this mobileno6................................passed
+And close6..................................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Home_page" name="log In functionality when user entered wrong otp" time="12.818567">
+        <system-out><![CDATA[Given user is on LogIn page7................................................passed
+When enter registered mobile no7............................................passed
+And click on next7..........................................................passed
+When enter wrong otp........................................................passed
+Then alert incorrect otp code...............................................passed
+And close7..................................................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
